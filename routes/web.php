@@ -100,4 +100,12 @@ Route::get('/show-cart', 'App\Http\Controllers\CartController@show_cart');
 Route::get('/delete-to-cart/{rowId}','App\Http\Controllers\CartController@delete_to_cart');
 
 
+//Checkout
+Route::get('/login-checkout', 'App\Http\Controllers\CheckoutController@login_checkout');
+Route::post('/add-customer', 'App\Http\Controllers\CheckoutController@add_customter');
+Route::get('/checkout', 'App\Http\Controllers\CheckoutController@checkout');
+
+
+
+
 

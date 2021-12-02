@@ -29,7 +29,7 @@ class CartController extends Controller
         $data['price'] = $product_infor->product_price;
         $data['weight'] = $product_infor->product_price;
         $data['options']['images'] = $product_infor->product_image;
-
+        Cart::setGlobalTax(21);
         Cart::add($data);
        
         return Redirect::to('/show-cart');

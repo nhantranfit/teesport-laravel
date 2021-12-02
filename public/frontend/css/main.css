@@ -1598,7 +1598,12 @@ h2.title {
 
 
 #cart_items .cart_info .image {
-  padding-left: 20px;
+  padding-left: 30px;
+}
+
+#cart_items .cart_info .cart_menu .description
+{
+  padding-left: 50px;
 }
 
 
@@ -1654,7 +1659,6 @@ h2.title {
 
 .cart_quantity_button .btn{
   background-color: #FE980F;
-  border-radius: 50px;
   border-width: 0;
   box-shadow: rgba(25,25,25,.04) 0 0 1px 0,rgba(0,0,0,.1) 0 3px 4px 0;
   color: #fcfbf9;
@@ -1662,7 +1666,7 @@ h2.title {
   display: inline-block;
   font-family: Arial,sans-serif;
   font-size: 1em;
-  height: 30px;
+  height: 28px;
   padding: 0 15px;
   transition: all 200ms;
   margin-left: 10px;

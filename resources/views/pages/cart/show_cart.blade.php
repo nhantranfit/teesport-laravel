@@ -3,8 +3,8 @@
 <section id="cart_items">
     <div class="breadcrumbs">
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li class="active">Shopping Cart</li>
+            <li><a href="{{asset('/')}}">Trang chủ</a></li>
+            <li class="active">Giỏ hàng của bạn</li>
         </ol>
     </div>
     <div class="table-responsive cart_info">
@@ -14,8 +14,8 @@
                     $content = Cart::content();       
                 ?>
                 <tr class="cart_menu">
-                    <td class="image">Sản phẩm</td>
-                    <td class="description">Mô tả</td>
+                    <td class="image">Hình ảnh</td>
+                    <td class="description">Tên sản phẩm</td>
                     <td class="price">Giá</td>
                     <td class="quantity">Số lượng</td>
                     <td class="total">Tổng</td>
@@ -43,7 +43,7 @@
                                 <input type="hidden" name="rowId" value="{{$v_content->rowId}}">
                                 <input class="cart_quantity_input" type="number" name="quantity"
                                 value="{{$v_content->qty}}" min="1">
-                                <input type="submit" value="update" name="update_qty" class="btn btn-default btn-sm">
+                                <input type="submit" value="Cập nhật" name="update_qty" class="btn btn-default btn-sm">
                             </form>
                         </div>
                     </td>
@@ -68,13 +68,13 @@
 </section>
 <!--/#cart_items-->
 <section id="do_action">
-    <div class="heading">
+    <!-- <div class="heading">
         <h3>What would you like to do next?</h3>
         <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery
             cost.</p>
-    </div>
+    </div> -->
     <div class="row">
-        <div class="col-sm-6">
+        <!-- <div class="col-sm-6">
             <div class="chose_area">
                 <ul class="user_option">
                     <li>
@@ -127,21 +127,21 @@
                 <a class="btn btn-default update" href="">Get Quotes</a>
                 <a class="btn btn-default check_out" href="">Continue</a>
             </div>
-        </div>
+        </div> -->
         <div class="col-sm-6">
             <div class="total_area">
                 <ul>
                     <li>Tổng tiền
                         <span>
-                            {{Cart::subtotal(0,',','.') . ' VNĐ'}}
+                            {{Cart::priceTotal(0,',','.') . ' VNĐ'}}
                         </span>
                     </li>
                     <li>Thuế <span>{{Cart::tax(0,',','.').' VNĐ'}}</span></li>
                     <li>Phí vận chuyển <span>Free</span></li>
-                    <li>Thành tiền <span>{{Cart::subtotal(0,',','.').' VNĐ'}}</span></li>
+                    <li>Thành tiền <span>{{Cart::total(0,',','.').' VNĐ'}}</span></li>
                 </ul>
-                <a class="btn btn-default update" href="">Update</a>
-                <a class="btn btn-default check_out" href="">Check Out</a>
+                
+                <a class="btn btn-default check_out" href="{{asset('/login-checkout')}}">Thanh toán</a>
             </div>
         </div>
     </div>
